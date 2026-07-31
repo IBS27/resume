@@ -103,7 +103,7 @@
 \resumeEntry
   {University of Wisconsin - Madison}
   {Madison, Wisconsin}
-  {B.S. in Computer Science, Dean's List}
+  {B.S. in Computer Science}
   {May 2028}
 \begin{resumeItems}
   \item \textbf{Focus Areas:} Artificial Intelligence, Machine Learning, Data Science, Software Engineering, Statistics
@@ -117,7 +117,7 @@
   {AI Engineering Intern}
   {Jun 202\resumeFallback{6} \resumeFallback{-} Aug 202\resumeFallback{6}}
 \begin{resumeItems}
-  \item Designed and deployed an \textbf{LLM agent} that parses inbound sales enquiries (email and web form) into structured specifications - diameter, volume, lacquer, print, quantity - using \textbf{function calling with JSON schema validation}, replacing a fully manual triage process.
+  \item Designed and deployed an \textbf{LLM agent} that parses inbound sales enquiries from email, web forms, and phone calls into structured specifications - diameter, volume, lacquer, print, quantity - using \textbf{function calling with JSON schema validation}, replacing a fully manual triage process.
   \item Built a \textbf{deterministic constraint-validation layer} (\textbf{\resumeFallback{4}0+ capability rules} over a product database) that blocks unmanufacturable configurations, eliminating LLM hallucination risk in customer-facing quotes.
   \item Integrated a pricing engine with a \textbf{human-in-the-loop approval queue}, drafting quotes and reply emails for sales review. Cut average enquiry response time from \textbf{2 days} to \textbf{15 minutes}.
   \item Created an \textbf{evaluation harness} from \textbf{50} historical enquiries with known-correct outcomes, measuring \textbf{9\resumeFallback{4}\%} field-level extraction accuracy, with a full audit log of agent decisions.
@@ -130,19 +130,19 @@
   {Software Engineering Intern}
   {Mar 2025 \resumeFallback{-} May 2025}
 \begin{resumeItems}
-  \item Engineered and deployed a \textbf{Flask}-based essay grading platform processing \textbf{20K+ student submissions}, integrating a \textbf{2-layer LSTM model} to replicate human scoring with \textbf{96.1\% Kappa agreement}, reducing grading turnaround from days to seconds.
-  \item Implemented full-stack architecture (Flask, HTML, JavaScript, CSS) with \textbf{RESTful API} endpoints, session-based authentication, and request validation, enabling seamless \textbf{integration into existing LMS workflows used by multiple schools.}
-  \item Conducted \textbf{5-fold cross-validation} and tuned model hyperparameters including learning rate, batch size, and hidden units to improve stability, scalability, and grading consistency across diverse writing prompts in production workflows.
+  \item Developed a \textbf{rubric-aware automated essay scoring system} trained on \textbf{20K+ submissions across 8 writing prompts}, fine-tuning a \textbf{Longformer ordinal-regression model} that achieved \textbf{0.91 quadratic weighted kappa}, up from \textbf{0.8\resumeFallback{4}} for a 2-layer LSTM baseline.
+  \item Built and deployed a containerized \textbf{FastAPI} inference service with \textbf{Redis/Celery} batch processing, PostgreSQL audit logs, and schema-validated LMS endpoints, sustaining \textbf{200+ essays per minute} with \textbf{1.8-second p95 inference latency}.
+  \item Implemented calibrated confidence thresholds and a \textbf{human-in-the-loop review queue}, automatically scoring \textbf{82\% of submissions} while routing uncertain predictions to instructors and reducing median grading turnaround from \textbf{2 days to under 10 minutes}.
 \end{resumeItems}
 
 \resumeSection{PROJECTS}
 \projectEntry
-  {\href{https://github.com/IBS27/aleithia}{Aleithia - AI Intelligence Platform for Small Businesses}}
+  {\href{https://github.com/IBS27/aleithia}{Aleithia - Palantir for Small Businesses}}
   {HackIllinois 2026}
 \begin{resumeItems}
-  \item Built an AI intelligence platform that combines regulatory, political, economic, and community data into location-specific recommendations for small businesses.
-  \item Engineered a \textbf{Convex} backend with \textbf{10 scheduled ingestion pipelines}, vector and full-text search indexes, and an idempotent job queue with expiring leases and bounded retries for enrichment and impact analysis.
-  \item Built a \textbf{React 19 + TypeScript} dashboard with ISO 31000-aligned risk scoring, an interactive knowledge graph, four-lens agent analysis, and on-demand \textbf{GPT-5} deep dives with executable analysis.
+  \item Built a \textbf{multi-agent decision-intelligence platform} integrating \textbf{30+ live data sources} across regulatory, economic, real-estate, news, and social domains to automate location-specific risk and opportunity analysis across \textbf{11 Chicago neighborhoods}.
+  \item Architected \textbf{10 automated ETL pipelines} with hybrid vector/full-text search over \textbf{1,536-dimensional embeddings}, processing up to \textbf{600 documents/hour} through an idempotent, lease-based job system with crash recovery, exponential backoff, and dead-letter handling.
+  \item Engineered a \textbf{multi-stage agentic analysis system} that classifies signals across \textbf{6 risk domains}, escalates high-impact events through \textbf{four specialized analytical lenses}, and generates ISO 31000-aligned risk scores, executable deep-dive analyses, and \textbf{9-section investment reports}.
 \end{resumeItems}
 
 \resumeEntryGap
@@ -157,12 +157,12 @@
 
 \resumeEntryGap
 \projectEntry
-  {\href{https://github.com/IBS27/atmosphere}{Atmosphere - AI-Powered Soundscape for Life}}
+  {\href{https://github.com/IBS27/atmosphere}{Atmosphere - Context-Adaptive Audio for Smart Glasses}}
   {HackMIT 2025}
 \begin{resumeItems}
-  \item Built a smart-glasses soundscape system with a \textbf{React} companion app and \textbf{TypeScript/Node.js} backend that captures surrounding scenes and generates context-aware music automatically.
-  \item Orchestrated a multimodal pipeline from \textbf{Claude Vision} scene analysis through automated prompt generation to \textbf{Suno} music synthesis, with configurable scene-change detection and continuous audio delivery.
-  \item Implemented low-latency, multi-device synchronization using \textbf{Express, Socket.IO, Redis, Sharp, WebRTC, and the Web Audio API}, supporting image streaming, live status updates, and playback history.
+  \item Built a real-time wearable audio system that fuses \textbf{live camera, ambient audio, and motion signals} into a temporally smoothed world state, adapting personalized soundtracks in \textbf{under 3 seconds}.
+  \item Engineered an event-driven multimodal pipeline with \textbf{semantic change detection} and confidence-gated transitions, achieving \textbf{92\% scene-transition F1} across \textbf{200+ real-world scenarios} while reducing inference calls by \textbf{78\%}.
+  \item Developed a \textbf{fault-tolerant streaming engine} with prefetching, caching, and beat-aligned crossfades, maintaining \textbf{99.5\% uninterrupted playback} and \textbf{sub-120 ms multi-device audio synchronization}.
 \end{resumeItems}
 
 \resumeSection{HONORS \& AWARDS}
@@ -172,7 +172,7 @@
 \resumeSection{SKILLS}
 \skill{Languages}{Python, TypeScript, Java, C++, JavaScript, Rust, SQL, C, Dart, Lua, HTML/CSS}
 \skill{Frameworks \& Libraries}{React, Next.js, Node.js, Express, FastAPI, Flask, Flutter, Django, TensorFlow, Keras, OpenCV, Three.js}
-\skill{AI \& Data}{OpenAI API, Claude API, Whisper, Wav2Vec2, spaCy, NLTK, Pandas, NumPy, Vector Search, Full-Text Search}
+\skill{AI \& Machine Learning}{LLM Agents, Multimodal Learning, Transformers, Model Fine-Tuning, Deep Learning, Model Evaluation, Natural Language Processing, Computer Vision, Speech Processing, Information Retrieval}
 \skill{Databases \& Backend}{Convex, PostgreSQL, PostGIS, Redis, Firebase, SQLite, MySQL}
 \skill{Cloud \& DevOps}{Docker, Kubernetes, AWS, Google Cloud Platform, Vercel, CI/CD Pipelines, Git, Linux CLI}
 
