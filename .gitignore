@@ -1,0 +1,25 @@
+.DS_Store
+
+# Routine build and verification output
+build/
+output/
+tmp/
+
+# LaTeX artifacts, including files accidentally emitted outside build/
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.xdv
+
+# Routine PDFs are reproducible. Release snapshots are intentionally tracked.
+*.pdf
+!releases/
+!releases/*.pdf

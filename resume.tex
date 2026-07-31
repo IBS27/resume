@@ -1,0 +1,179 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[
+  letterpaper,
+  left=0.27in,
+  right=0.27in,
+  top=0.27in,
+  bottom=0.22in
+]{geometry}
+\usepackage{fontspec}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{hyperref}
+
+\setmainfont{Calibri}[
+  Path=fonts/,
+  UprightFont=Calibri-Regular-subset.ttf,
+  BoldFont=Calibri-Bold-subset.ttf,
+  ItalicFont=Calibri-Italic-subset.ttf
+]
+\newfontfamily\resumeBulletFont{Arial}
+\newfontfamily\resumeFallbackFont{Arial}
+\newcommand{\resumeFallback}[1]{{\resumeFallbackFont#1}}
+\hypersetup{
+  colorlinks=false,
+  pdfborder={0 0 0},
+  pdftitle={Srinivas Indavara Badrinath - Resume},
+  pdfauthor={Srinivas Indavara Badrinath}
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\emergencystretch}{2em}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\tolerance=1800
+
+\newcommand{\resumeSection}[1]{%
+  \par\vspace{2.7pt}%
+  {\fontsize{11.5}{12}\selectfont\bfseries
+    \underline{\makebox[\linewidth][l]{#1}}%
+  }%
+  \par\vspace{2.1pt}%
+}
+
+\newcommand{\resumeEntry}[4]{%
+  \begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{#1} & \textbf{#2} \\
+    \textit{#3} & \textit{#4}
+  \end{tabular*}\par
+}
+
+\newcommand{\projectEntry}[2]{%
+  \begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{\underline{#1}} & {\resumeBulletFont\itshape #2\/}
+  \end{tabular*}\par
+}
+
+\newcommand{\awardEntry}[3]{%
+  \begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{#1} - #2 & {\resumeBulletFont #3}
+  \end{tabular*}\par
+}
+
+\newenvironment{resumeItems}{%
+  \begin{itemize}[
+    leftmargin=0.50in,
+    label={\resumeBulletFont\textbullet},
+    labelsep=0.18in,
+    labelwidth=0.10in,
+    itemindent=0pt,
+    topsep=0pt,
+    partopsep=0pt,
+    parsep=0pt,
+    itemsep=0.25pt
+  ]
+}{%
+  \end{itemize}\vspace{-1.6pt}
+}
+
+\newcommand{\resumeEntryGap}{\par\vspace{2.4pt}}
+\newcommand{\skill}[2]{\textbf{#1:} #2\par}
+
+\begin{document}
+\fontsize{9.50}{12.35}\selectfont
+
+\begin{center}
+  {\fontsize{16}{17}\selectfont\bfseries Srinivas Indavara Badrinath}\par
+  \vspace{1.3pt}
+  {\fontsize{10.25}{11.5}\selectfont
+    \href{mailto:ibsrinivas27@gmail.com}{ibsrinivas27@gmail.com}
+    \,|\, \href{https://srinivasib.com}{srinivasib.com}
+    \,|\, \href{https://linkedin.com/in/srinivasib}{linkedin.com/in/srinivasib}
+    \,|\, \href{https://github.com/IBS27}{github.com/IBS27}
+  }\par
+\end{center}
+\vspace{2pt}
+
+\resumeSection{EDUCATION}
+\resumeEntry
+  {University of Wisconsin - Madison}
+  {Madison, Wisconsin}
+  {B.S. in Computer Science, Dean's List}
+  {May 2028}
+\begin{resumeItems}
+  \item \textbf{Focus Areas:} Artificial Intelligence, Machine Learning, Data Science, Software Engineering, Statistics
+  \item \textbf{Related Coursework:} Object-Oriented Programming, Data Structures \& Algorithms, Computer Engineering, Machine Organization, Probability Theory, Linear Algebra, Statistics, Calculus, Discrete Math
+\end{resumeItems}
+
+\resumeSection{EXPERIENCE}
+\resumeEntry
+  {Vaspal Packaging LLP}
+  {Mysuru, India}
+  {AI Engineering Intern}
+  {Jun 202\resumeFallback{6} \resumeFallback{-} Aug 202\resumeFallback{6}}
+\begin{resumeItems}
+  \item Designed and deployed an \textbf{LLM agent} that parses inbound sales enquiries (email and web form) into structured specifications - diameter, volume, lacquer, print, quantity - using \textbf{function calling with JSON schema validation}, replacing a fully manual triage process.
+  \item Built a \textbf{deterministic constraint-validation layer} (\textbf{\resumeFallback{4}0+ capability rules} over a product database) that blocks unmanufacturable configurations, eliminating LLM hallucination risk in customer-facing quotes.
+  \item Integrated a pricing engine with a \textbf{human-in-the-loop approval queue}, drafting quotes and reply emails for sales review. Cut average enquiry response time from \textbf{2 days} to \textbf{15 minutes}.
+  \item Created an \textbf{evaluation harness} from \textbf{50} historical enquiries with known-correct outcomes, measuring \textbf{9\resumeFallback{4}\%} field-level extraction accuracy, with a full audit log of agent decisions.
+\end{resumeItems}
+
+\resumeEntryGap
+\resumeEntry
+  {Excelsoft Technologies}
+  {Mysore, India}
+  {Software Engineering Intern}
+  {Mar 2025 \resumeFallback{-} May 2025}
+\begin{resumeItems}
+  \item Engineered and deployed a \textbf{Flask}-based essay grading platform processing \textbf{20K+ student submissions}, integrating a \textbf{2-layer LSTM model} to replicate human scoring with \textbf{96.1\% Kappa agreement}, reducing grading turnaround from days to seconds.
+  \item Implemented full-stack architecture (Flask, HTML, JavaScript, CSS) with \textbf{RESTful API} endpoints, session-based authentication, and request validation, enabling seamless \textbf{integration into existing LMS workflows used by multiple schools.}
+  \item Conducted \textbf{5-fold cross-validation} and tuned model hyperparameters including learning rate, batch size, and hidden units to improve stability, scalability, and grading consistency across diverse writing prompts in production workflows.
+\end{resumeItems}
+
+\resumeSection{PROJECTS}
+\projectEntry
+  {\href{https://github.com/IBS27/aleithia}{Aleithia - AI Intelligence Platform for Small Businesses}}
+  {HackIllinois 2026}
+\begin{resumeItems}
+  \item Built an AI intelligence platform that combines regulatory, political, economic, and community data into location-specific recommendations for small businesses.
+  \item Engineered a \textbf{Convex} backend with \textbf{10 scheduled ingestion pipelines}, vector and full-text search indexes, and an idempotent job queue with expiring leases and bounded retries for enrichment and impact analysis.
+  \item Built a \textbf{React 19 + TypeScript} dashboard with ISO 31000-aligned risk scoring, an interactive knowledge graph, four-lens agent analysis, and on-demand \textbf{GPT-5} deep dives with executable analysis.
+\end{resumeItems}
+
+\resumeEntryGap
+\projectEntry
+  {\href{https://github.com/IBS27/truchain}{TruChain - Blockchain and AI Video Provenance}}
+  {Badger Build Fest 2025}
+\begin{resumeItems}
+  \item Built a three-layer video-authenticity system that establishes source-level provenance for elected officials through blockchain records, AI clip matching, and community context.
+  \item Implemented \textbf{Solana smart contracts in Rust and Anchor} using program-derived accounts, cryptographic video hashes, whitelisted endorsers, vote thresholds, and \textbf{IPFS} content-addressed storage.
+  \item Built a \textbf{FastAPI} service using \textbf{Whisper and Wav2Vec2} with sliding-window transcript search and speaker embeddings, reducing clip verification from minutes to \textbf{under seven seconds}.
+\end{resumeItems}
+
+\resumeEntryGap
+\projectEntry
+  {\href{https://github.com/IBS27/atmosphere}{Atmosphere - AI-Powered Soundscape for Life}}
+  {HackMIT 2025}
+\begin{resumeItems}
+  \item Built a smart-glasses soundscape system with a \textbf{React} companion app and \textbf{TypeScript/Node.js} backend that captures surrounding scenes and generates context-aware music automatically.
+  \item Orchestrated a multimodal pipeline from \textbf{Claude Vision} scene analysis through automated prompt generation to \textbf{Suno} music synthesis, with configurable scene-change detection and continuous audio delivery.
+  \item Implemented low-latency, multi-device synchronization using \textbf{Express, Socket.IO, Redis, Sharp, WebRTC, and the Web Audio API}, supporting image streaming, live status updates, and playback history.
+\end{resumeItems}
+
+\resumeSection{HONORS \& AWARDS}
+\awardEntry{Winner, OpenAI Track}{HackIllinois}{2026}
+\awardEntry{1st Place, Blockchain Track}{Badger Build Fest}{2025}
+
+\resumeSection{SKILLS}
+\skill{Languages}{Python, TypeScript, Java, C++, JavaScript, Rust, SQL, C, Dart, Lua, HTML/CSS}
+\skill{Frameworks \& Libraries}{React, Next.js, Node.js, Express, FastAPI, Flask, Flutter, Django, TensorFlow, Keras, OpenCV, Three.js}
+\skill{AI \& Data}{OpenAI API, Claude API, Whisper, Wav2Vec2, spaCy, NLTK, Pandas, NumPy, Vector Search, Full-Text Search}
+\skill{Databases \& Backend}{Convex, PostgreSQL, PostGIS, Redis, Firebase, SQLite, MySQL}
+\skill{Cloud \& DevOps}{Docker, Kubernetes, AWS, Google Cloud Platform, Vercel, CI/CD Pipelines, Git, Linux CLI}
+
+\end{document}
