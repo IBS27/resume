@@ -17,7 +17,7 @@ make pdf
 The ready-to-send file is written to:
 
 ```text
-output/pdf/Srinivas_Indavara_Badrinath_Resume.pdf
+Srinivas_Indavara_Badrinath_Resume.pdf
 ```
 
 All LaTeX intermediates stay under `build/latex/`. Running `latexmk` directly
@@ -37,6 +37,34 @@ To remove routine generated files:
 ```sh
 make clean
 ```
+
+## Resume variants
+
+The general resume remains in the repository root. Tailored source files and
+their ready-to-upload PDFs live directly under `variants/`.
+
+Create a new variant from the current general resume:
+
+```sh
+make new-variant VARIANT=ai
+```
+
+Edit `variants/ai.tex`, then build or verify it:
+
+```sh
+make variant VARIANT=ai
+make verify-variant VARIANT=ai
+```
+
+The ready-to-upload variant is:
+
+```text
+variants/Srinivas_Indavara_Badrinath_Resume_ai.pdf
+```
+
+Use short lowercase variant names such as `ai`, `backend`, or `general-swe`.
+Variants are maintained together on the same Git branch rather than on
+long-lived branches.
 
 ## Versioned releases
 
@@ -59,6 +87,15 @@ git commit -m "release: resume 2026.07.31-1"
 make tag VERSION=2026.07.31-1
 ```
 
-Annotated tags such as `resume-2026.07.31-1` identify the source revision that
-produced each released PDF. Tags are created locally; push them explicitly if
-a remote is added later.
+For a variant, include the same `VARIANT` value in both commands:
+
+```sh
+make release VARIANT=ai VERSION=2026.07.31-1
+git add variants/ai.tex releases/
+git commit -m "release: AI resume 2026.07.31-1"
+make tag VARIANT=ai VERSION=2026.07.31-1
+```
+
+Annotated tags such as `resume-general-2026.07.31-1` and
+`resume-ai-2026.07.31-1` identify the source revision that produced each PDF.
+Tags are created locally; push them explicitly if a remote is added later.

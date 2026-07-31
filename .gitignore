@@ -2,7 +2,6 @@
 
 # Routine build and verification output
 build/
-output/
 tmp/
 
 # LaTeX artifacts, including files accidentally emitted outside build/
