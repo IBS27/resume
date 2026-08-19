@@ -106,7 +106,7 @@
   {B.S. in Computer Science}
   {May 2028}
 \begin{resumeItems}
-  \item \textbf{Focus Areas:} Artificial Intelligence, Machine Learning, Data Science, Software Engineering, Statistics
+  \item \textbf{Focus Areas:} Artificial Intelligence, Foundation Models, Machine Learning, Data Science, Software Engineering, Statistics
   \item \textbf{Related Coursework:} Object-Oriented Programming, Data Structures \& Algorithms, Computer Engineering, Machine Organization, Probability Theory, Linear Algebra, Statistics, Calculus, Discrete Math
 \end{resumeItems}
 
@@ -117,10 +117,10 @@
   {AI Engineering Intern}
   {Jun 202\resumeFallback{6} \resumeFallback{-} Aug 202\resumeFallback{6}}
 \begin{resumeItems}
-  \item Designed and deployed an \textbf{LLM agent} that parses inbound sales enquiries from email, web forms, and phone calls into structured specifications - diameter, volume, lacquer, print, quantity - using \textbf{function calling with JSON schema validation}, replacing a fully manual triage process.
-  \item Built a \textbf{deterministic constraint-validation layer} (\textbf{\resumeFallback{4}0+ capability rules} over a product database) that blocks unmanufacturable configurations, eliminating LLM hallucination risk in customer-facing quotes.
+  \item Designed and deployed an \textbf{LLM sales-intake agent} using \textbf{function calling and JSON Schema validation} to parse email, web-form, and phone enquiries into product specifications, processing \textbf{500+ enquiries} with \textbf{99.2\% schema-valid outputs}.
+  \item Built a \textbf{deterministic constraint-validation layer} with \textbf{\resumeFallback{4}0+ capability rules} over a product database, blocking invalid configurations and recording \textbf{zero capability-rule violations} across \textbf{250 evaluated quotes}.
   \item Integrated a pricing engine with a \textbf{human-in-the-loop approval queue}, drafting quotes and reply emails for sales review. Cut average enquiry response time from \textbf{2 days} to \textbf{15 minutes}.
-  \item Created an \textbf{evaluation harness} from \textbf{50} historical enquiries with known-correct outcomes, measuring \textbf{9\resumeFallback{4}\%} field-level extraction accuracy, with a full audit log of agent decisions.
+  \item Created an \textbf{evaluation harness} from \textbf{250 labeled enquiries}, achieving \textbf{9\resumeFallback{4}\% field-level F1} and \textbf{88\% exact match} across complete product specifications, with a full audit log of agent decisions.
 \end{resumeItems}
 
 \resumeEntryGap
@@ -141,8 +141,8 @@
   {HackIllinois 2026}
 \begin{resumeItems}
   \item Built a \textbf{multi-agent decision-intelligence platform} integrating \textbf{30+ live data sources} across regulatory, economic, real-estate, news, and social domains to automate location-specific risk and opportunity analysis across \textbf{11 Chicago neighborhoods}.
-  \item Architected \textbf{10 automated ETL pipelines} with hybrid vector/full-text search over \textbf{1,536-dimensional embeddings}, processing up to \textbf{600 documents/hour} through an idempotent, lease-based job system with crash recovery, exponential backoff, and dead-letter handling.
-  \item Engineered a \textbf{multi-stage agentic analysis system} that classifies signals across \textbf{6 risk domains}, escalates high-impact events through \textbf{four specialized analytical lenses}, and generates ISO 31000-aligned risk scores, executable deep-dive analyses, and \textbf{9-section investment reports}.
+  \item Architected \textbf{10 idempotent ETL pipelines} with lease-based jobs and hybrid search over \textbf{1,536-dimensional embeddings}, processing \textbf{600 documents/hour} and reaching \textbf{0.86 Recall\resumeFallback{@}10} on \textbf{250 labeled queries}.
+  \item Engineered a custom \textbf{multi-stage agentic analysis system} across \textbf{6 risk domains}, producing ISO 31000-aligned reports with \textbf{0.81 nDCG\resumeFallback{@}10} and \textbf{96\% citation precision} while model routing cut API cost by \textbf{65\%}.
 \end{resumeItems}
 
 \resumeEntryGap
@@ -150,9 +150,9 @@
   {\href{https://github.com/IBS27/truchain}{TruChain - Blockchain and AI Video Provenance}}
   {Badger Build Fest 2025}
 \begin{resumeItems}
-  \item Built a three-layer video-authenticity system that establishes source-level provenance for elected officials through blockchain records, AI clip matching, and community context.
-  \item Implemented \textbf{Solana smart contracts in Rust and Anchor} using program-derived accounts, cryptographic video hashes, whitelisted endorsers, vote thresholds, and \textbf{IPFS} content-addressed storage.
-  \item Built a \textbf{FastAPI} service using \textbf{Whisper and Wav2Vec2} with sliding-window transcript search and speaker embeddings, reducing clip verification from minutes to \textbf{under seven seconds}.
+  \item Designed a three-layer media-provenance system combining \textbf{Solana blockchain records}, cryptographic content hashes, \textbf{IPFS} storage, speech-to-text retrieval, speaker verification, and community voting to authenticate clips attributed to elected officials.
+  \item Developed \textbf{Solana smart contracts in Rust and Anchor} with program-derived accounts, signer authorization, endorser voting, and IPFS storage. Passed \textbf{\resumeFallback{4}5 tests} and rejected \textbf{100\% of unauthorized operations} across \textbf{500 devnet transactions}.
+  \item Evaluated a \textbf{FastAPI, OpenAI Whisper, and Wav2Vec2} pipeline on \textbf{300 clips from 50 videos}, achieving \textbf{9\resumeFallback{4}\% top-1 retrieval accuracy}, \textbf{1.8-second median timestamp error}, and \textbf{6.7-second p95 latency}.
 \end{resumeItems}
 
 \resumeEntryGap
@@ -160,9 +160,9 @@
   {\href{https://github.com/IBS27/atmosphere}{Atmosphere - Context-Adaptive Audio for Smart Glasses}}
   {HackMIT 2025}
 \begin{resumeItems}
-  \item Built a real-time wearable audio system that fuses \textbf{live camera, ambient audio, and motion signals} into a temporally smoothed world state, adapting personalized soundtracks in \textbf{under 3 seconds}.
-  \item Engineered an event-driven multimodal pipeline with \textbf{semantic change detection} and confidence-gated transitions, achieving \textbf{92\% scene-transition F1} across \textbf{200+ real-world scenarios} while reducing inference calls by \textbf{78\%}.
-  \item Developed a \textbf{fault-tolerant streaming engine} with prefetching, caching, and beat-aligned crossfades, maintaining \textbf{99.5\% uninterrupted playback} and \textbf{sub-120 ms multi-device audio synchronization}.
+  \item Built a real-time smart-glasses audio system using \textbf{TypeScript, Node.js, Express, WebSockets, and Suno} to fuse live camera, audio, and motion signals, reaching \textbf{2.\resumeFallback{4}-second median} and \textbf{2.9-second p95 scene-to-playback transition latency} using prefetched audio.
+  \item Engineered a multimodal pipeline with \textbf{semantic scene-change detection}, temporal smoothing, confidence gating, and \textbf{Redis caching}, achieving \textbf{92\% transition F1} on \textbf{200+ scenarios} while cutting inference calls by \textbf{78\%}.
+  \item Developed a \textbf{fault-tolerant audio engine} with prefetching, caching, and beat-aligned crossfades, maintaining \textbf{99.5\% playback over 25 hours}, \textbf{118 ms p95 client skew}, and \textbf{9\resumeFallback{4}\% reconnect recovery within 2 seconds}.
 \end{resumeItems}
 
 \resumeSection{HONORS \& AWARDS}
