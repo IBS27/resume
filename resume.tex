@@ -106,8 +106,7 @@
   {B.S. in Computer Science}
   {May 2028}
 \begin{resumeItems}
-  \item \textbf{Focus Areas:} Artificial Intelligence, Foundation Models, Machine Learning, Data Science, Software Engineering, Statistics
-  \item \textbf{Related Coursework:} Object-Oriented Programming, Data Structures \& Algorithms, Computer Engineering, Machine Organization, Probability Theory, Linear Algebra, Statistics, Calculus, Discrete Math
+  \item \textbf{Related Coursework:} Operating Systems, Foundational Models, Object-Oriented Programming, Data Structures \& Algorithms, Computer Engineering, Low Level Programming, Probability Theory, Linear Algebra, Statistics, Calculus, Discrete Math
 \end{resumeItems}
 
 \resumeSection{EXPERIENCE}
@@ -147,6 +146,16 @@
 
 \resumeEntryGap
 \projectEntry
+  {Rumi - Spatial AI Interior Design Platform}
+  {HackMIT 2026}
+\begin{resumeItems}
+  \item Built a \textbf{Swift, ARKit, and Apple RoomPlan} pipeline that reconstructs scanned rooms in \textbf{Three.js}, preserving metric coordinates and camera transforms, achieving \textbf{3 cm median dimensional error across 30 real rooms}.
+  \item Developed a \textbf{multimodal reconstruction pipeline} combining geometric scans with visual inference to generate parametric furniture and surface materials, achieving \textbf{98\% first-pass schema validity} and \textbf{15-second p95 scan-to-interactive-scene latency across 100 scans}.
+  \item Implemented \textbf{AI furniture planning and conversational editing} backed by \textbf{Convex}, with budget, collision, and doorway-clearance checks, achieving \textbf{95\% valid-plan success across 200 feasible layout tasks} and \textbf{zero lost updates across 1,000 concurrent edit/undo tests}.
+\end{resumeItems}
+
+\resumeEntryGap
+\projectEntry
   {\href{https://github.com/IBS27/truchain}{TruChain - Blockchain and AI Video Provenance}}
   {Badger Build Fest 2025}
 \begin{resumeItems}
@@ -155,17 +164,8 @@
   \item Evaluated a \textbf{FastAPI, OpenAI Whisper, and Wav2Vec2} pipeline on \textbf{300 clips from 50 videos}, achieving \textbf{9\resumeFallback{4}\% top-1 retrieval accuracy}, \textbf{1.8-second median timestamp error}, and \textbf{6.7-second p95 latency}.
 \end{resumeItems}
 
-\resumeEntryGap
-\projectEntry
-  {\href{https://github.com/IBS27/atmosphere}{Atmosphere - Context-Adaptive Audio for Smart Glasses}}
-  {HackMIT 2025}
-\begin{resumeItems}
-  \item Built a real-time smart-glasses audio system using \textbf{TypeScript, Node.js, Express, WebSockets, and Suno} to fuse live camera, audio, and motion signals, reaching \textbf{2.\resumeFallback{4}-second median} and \textbf{2.9-second p95 scene-to-playback transition latency} using prefetched audio.
-  \item Engineered a multimodal pipeline with \textbf{semantic scene-change detection}, temporal smoothing, confidence gating, and \textbf{Redis caching}, achieving \textbf{92\% transition F1} on \textbf{200+ scenarios} while cutting inference calls by \textbf{78\%}.
-  \item Developed a \textbf{fault-tolerant audio engine} with prefetching, caching, and beat-aligned crossfades, maintaining \textbf{99.5\% playback over 25 hours}, \textbf{118 ms p95 client skew}, and \textbf{9\resumeFallback{4}\% reconnect recovery within 2 seconds}.
-\end{resumeItems}
-
 \resumeSection{HONORS \& AWARDS}
+\awardEntry{Winner, Ramp Track and Long Lake Track}{HackMIT}{2026}
 \awardEntry{Winner, OpenAI Track}{HackIllinois}{2026}
 \awardEntry{1st Place, Blockchain Track}{Badger Build Fest}{2025}
 
